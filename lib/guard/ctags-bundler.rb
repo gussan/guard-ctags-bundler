@@ -13,8 +13,8 @@ module Guard
 
     def start
       UI.info 'Guard::CtagsBundler is running!'
-      @ctags_generator.generate_bundler_tags
       @ctags_generator.generate_project_tags
+      @ctags_generator.generate_bundler_tags
       @ctags_generator.generate_stdlib_tags if options[:stdlib]
     end
 
